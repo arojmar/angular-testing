@@ -18,6 +18,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
+    expect().
   });
 
   it(`should have as title 'angular-testing'`, () => {
@@ -31,5 +32,11 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('angular-testing app is running!');
+  });
+
+  it(`should have as title 'angular-testing'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('angular-testing');
   });
 });
